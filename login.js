@@ -17,7 +17,7 @@ $(document).ready(function() {
                 success:function(Record)
                 {
                     msg=Record.responseText;
-                    alert("Hi")
+                    
                     $('#div5').text(msg);
                 },
                 error:function(err)
@@ -29,6 +29,3 @@ $(document).ready(function() {
 });
 });
 
-function check(){
-    console.log(document.getElementById("email_id").value+" "+document.getElementById("password").value);
-}
