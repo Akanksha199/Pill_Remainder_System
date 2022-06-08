@@ -1,11 +1,12 @@
 $(document).ready(function() {
-    $('#b2').click(function(){ 
+    $('#b').click(function(){ 
             var msg="";
             
             var pobj={
-                "email_id":$('#email_id').val(),
+                "email":$('#email_id').val(),
                 "password":$('#password').val()
             };
+            
            
             $.ajax({
                 url:'http://localhost:8080/login',
@@ -16,10 +17,13 @@ $(document).ready(function() {
                 success:function(Record)
                 {
                     msg=Record.responseText;
+                    alert("Hi")
+                    $('#div5').text(msg);
                 },
                 error:function(err)
                 {
                     msg=err.responseText;
+                    $('#div5').text(msg);
                 }
             })   
 });
